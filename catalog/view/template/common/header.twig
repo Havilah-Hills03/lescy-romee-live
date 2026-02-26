@@ -4,6 +4,9 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <title>{{ title }}</title>
   <base href="{{ base }}"/>
   {% if description %}
@@ -76,19 +79,79 @@
   <header>
     <div class="container">
       <div class="row">
-        <div class="col-md-3 col-lg-4">
+        <div class="col-md-2 col-lg-2">
           <div id="logo">
             {% if logo %}
-              <a href="{{ home }}"><img src="{{ logo }}" title="{{ name }}" alt="{{ name }}" class="img-fluid"/></a>
+              <a href="{{ home }}" >
+              <img src="{{ logo }}" title="{{ name }}" alt="{{ name }}" class="img-fluid pe-4 d-none d-sm-none d-lg-block " /></a>
             {% else %}
               <h1><a href="{{ home }}">{{ name }}</a></h1>
             {% endif %}
           </div>
         </div>
-        <div class="col-md-5">{{ search }}</div>
-        <div id="cart" class="col-md-4 col-lg-3 mb-2">{{ cart }}</div>
+        <div class="col-md-6 col-lg-6 main-menu">
+        {{ menu }}
+        </div>
+     
+        <div id="cart" class="col-md-1 col-lg-2 mb-2">{{ cart }}</div>
+           <div class="col-md-2 ">{{ search }}</div>
       </div>
-    </div>
+    </div> 
+
+
+    <style>
+    body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Optional: apply Inter to headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+}
+.nav-item-link .nav-link {
+    color: #212529 !important;
+    font-size: 1rem;
+    position: relative;
+    padding-left: 15px; /* space for the dot */
+}
+ 
+    .nav-item  .nav-link{
+         color: #212529!important;
+    font-size: 1rem;
+    position: relative;
+  
+    }
+   .nav-item .nav-link::after {
+    content: '\25BE'; 
+    position: absolute; 
+    font-size: 1.1em;
+    padding-left: 6px;  
+}
+.nav-item:hover .nav-link::after{
+   content: '\25B4'; 
+    position: absolute; 
+
+}
+@media (max-width: 768px) {
+
+  /* Hide the Categories text on mobile */
+  #container nav #category {
+      display: none !important;
+  }
+  .logo-section {
+    display: flex;
+    justify-content: space-between;
+  }
+  .logo-section img{
+     display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-left: -4em;
+      width: 110px;
+  }
+ 
+}
+    </style>
   </header>
   <main>
-    {{ menu }}
+   
