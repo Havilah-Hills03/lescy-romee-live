@@ -1,0 +1,78 @@
+{{ header }}
+<section style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; margin: 0 auto; background: linear-gradient(93.23deg, #E31E24 0.65%, #7D1114 67.91%); padding: 2rem; box-sizing: border-box;" class="hero-section">
+  
+  <!-- Text Content -->
+  <div style="flex: 0 0 60%; text-align: left; " class="content">
+    <h1 style="color: white;  font-weight: bold; line-height: 1.2; margin-bottom: 1rem;">
+      Hot,Fresh meals <br/> <span style="font-weight: normal;">Delivered in 20 minutes</span>
+    </h1>
+    <a href="#content" style="display: inline-block; margin-top: 1rem; background-color: transparent; color: white; font-weight: bold; text-decoration: none; border-radius: 20px;  border: 2px solid #fff;">
+      Order Now
+    </a>
+  </div>
+
+  <!-- Image Content -->
+  <div style="flex: 0 0 40%; display: flex; justify-content: center; align-items: center;">
+    <img src="image/catalog/home-hero-banner.png" alt="Delicious meals" style="width: 80%; height: auto; object-fit: cover; border-radius: 8px;">
+  </div>
+<style>
+.hero-section a {
+  font-size: 1rem;
+   padding: 0.45rem 1.2rem;
+}
+#content h3 {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 800;
+    margin: 40px 20px; 
+    text-align: center;
+}
+@media(min-width: 992px) {
+  .hero-section{
+     height: 66vh; 
+  }
+  .hero-section h1{
+font-size: 48px;
+}
+.hero-section a {
+  font-size: 20px;
+   padding: 0.75rem 3.5rem;
+}
+.hero-section .content{
+   padding-left: 60px;
+   margin-top: 2rem;
+}
+}
+</style>
+</section>
+
+<div id="common-home" 
+     style="background: linear-gradient(167.02deg, #E31E24 12.38%, #B0171C 18%, #7D1114 100%);
+            padding: 40px 20px;
+            margin-bottom: 12em;">
+            
+  <div class="container"> 
+      {{ column_left }}
+
+      <div id="content" class="col">
+        {{ content_top }}
+        {{ content_bottom }}
+      </div>
+
+      {{ column_right }} 
+  </div>
+
+  <style>
+  #common-home .container .row  .col{
+   background: blue!important;   
+    display: flex !important;   
+    grid-template-columns: none !important;
+    margin: 10px
+}
+</style>
+</div>
+
+
+{{footer}}
+
+

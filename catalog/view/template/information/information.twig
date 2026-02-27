@@ -1,14 +1,64 @@
 {{ header }}
+
 <div id="information-information" class="container">
-  <ul class="breadcrumb">
+      <!--   <ul class="breadcrumb">
     {% for breadcrumb in breadcrumbs %}
-    <li class="breadcrumb-item"><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
+      <li class="breadcrumb-item">
+        <a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a>
+      </li> -->
     {% endfor %}
   </ul>
-  <div class="row">{{ column_left }}
-    <div id="content" class="col">{{ content_top }}
-      <h1>{{ heading_title }}</h1>
-      {{ description }}{{ content_bottom }}</div>
-    {{ column_right }}</div>
+
+  <div class="row">
+    {{ column_left }}
+
+    <div id="content" class="col">
+      {{ content_top }}
+
+      {% if information_id == 1 %}
+
+        <!-- CUSTOM ABOUT PAGE DESIGN -->
+        <section class="about-hero">
+          <h1>Freshly Prepared Today. At Your Door in Minutes.</h1>
+          <p>
+            We don’t believe in "sitting on a shelf." Our kitchen fires up every
+            morning to prep fresh ingredients from scratch.
+          </p>
+        </section>
+
+        <section class="about-values">
+          <h2>Our Values</h2>
+          <div class="values-grid">
+            <div class="value-card">
+              <h3>Quality Without Shortcuts</h3>
+              <p>We believe fast should not mean cheap.</p>
+            </div>
+
+            <div class="value-card">
+              <h3>Radical Freshness</h3>
+              <p>Prepped today, served today, enjoyed today.</p>
+            </div>
+
+            <div class="value-card">
+              <h3>People-First Service</h3>
+              <p>Happy hands make better food.</p>
+            </div>
+          </div>
+        </section>
+
+      {% else %}
+
+        <!-- NORMAL INFORMATION PAGE -->
+        <h1>{{ heading_title }}</h1>
+        {{ description }}
+
+      {% endif %}
+
+      {{ content_bottom }}
+    </div>
+
+    {{ column_right }}
+  </div>
 </div>
+
 {{ footer }}

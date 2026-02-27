@@ -1,5 +1,5 @@
 {{ header }}
-<div id="product-search" class="container">
+<div id="product-manufacturer" class="container">
   <ul class="breadcrumb">
     {% for breadcrumb in breadcrumbs %}
       <li class="breadcrumb-item"><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
@@ -23,7 +23,8 @@
           </div>
           <div class="col-md-4 offset-md-1 col-6">
             <div class="input-group mb-3">
-              <label for="input-sort" class="input-group-text">{{ text_sort }}</label> <select id="input-sort" class="form-select" onchange="location = this.value;">
+              <label for="input-sort" class="input-group-text">{{ text_sort }}</label>
+              <select id="input-sort" class="form-select" onchange="location = this.value;">
                 {% for sorts in sorts %}
                   <option value="{{ sorts.href }}"{% if sorts.value == '%s-%s'|format(sort, order) %} selected{% endif %}>{{ sorts.text }}</option>
                 {% endfor %}
@@ -41,7 +42,7 @@
             </div>
           </div>
         </div>
-        <div id="product-list" class="row row-cols-2 row-cols-sm-2 row-cols-md-2 row-cols-lg-4">
+        <div id="product-list" class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-4">
           {% for product in products %}
             <div class="col mb-3">{{ product }}</div>
           {% endfor %}

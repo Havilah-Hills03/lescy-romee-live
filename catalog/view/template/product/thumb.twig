@@ -1,40 +1,145 @@
 <div class="product-thumb">
-  <div class="image"><a href="{{ href }}"><img src="{{ thumb }}" alt="{{ name }}" title="{{ name }}" class="img-fluid"/></a></div>
-  <div class="content">
+
+  <div class="image text-center">
+    <a href="{{ href }}">
+      <img src="{{ thumb }}" alt="{{ name }}" title="{{ name }}" class="img-fluid">
+    </a>
+  </div>
+
+  <div class="content d-flex flex-column">
+
     <div class="description">
-      <h4><a href="{{ href }}">{{ name }}</a></h4>
-      <p>{{ description }}</p>
+      <h4 class="product-title">
+        <a href="{{ href }}">{{ name }}</a>
+      </h4>
+
+      <p class="product-desc">
+        {{ description }}
+      </p>
+
       {% if price %}
         <div class="price">
           {% if not special %}
             <span class="price-new">{{ price }}</span>
           {% else %}
-            <span class="price-new">{{ special }}</span> <span class="price-old">{{ price }}</span>
+            <span class="price-new">{{ special }}</span>
+            <span class="price-old">{{ price }}</span>
           {% endif %}
-          {% if tax %}
-            <span class="price-tax">{{ text_tax }} {{ tax }}</span>
-          {% endif %}
-        </div>
-      {% endif %}
-      {% if review_status and rating %}
-        <div class="rating">
-          {% for i in 1..5 %}
-            {% if rating < i %}
-              <span class="fa-stack"><i class="fa-regular fa-star fa-stack-1x"></i></span>
-            {% else %}
-              <span class="fa-stack"><i class="fa-solid fa-star fa-stack-1x"></i><i class="fa-regular fa-star fa-stack-1x"></i></span>
-            {% endif %}
-          {% endfor %}
         </div>
       {% endif %}
     </div>
-    <form method="post" data-oc-toggle="ajax" data-oc-load="{{ cart }}" data-oc-target="#cart">
-      <div class="button">
-        <button type="submit" formaction="{{ cart_add }}" data-bs-toggle="tooltip" title="{{ button_cart }}"><i class="fa-solid fa-shopping-cart"></i></button>
-        <button type="submit" formaction="{{ wishlist_add }}" data-bs-toggle="tooltip" title="{{ button_wishlist }}" ><i class="fa-solid fa-heart"></i></button>
-        <button type="submit" formaction="{{ compare_add }}" data-bs-toggle="tooltip" title="{{ button_compare }}"><i class="fa-solid fa-arrow-right-arrow-left"></i></button>
-      </div>
-      <input type="hidden" name="product_id" value="{{ product_id }}"/> <input type="hidden" name="quantity" value="{{ minimum }}"/>
+
+    <form method="post"
+          data-oc-toggle="ajax"
+          data-oc-load="{{ cart }}"
+          data-oc-target="#cart"
+          class="mt-auto">
+
+      <button type="submit"
+              formaction="{{ cart_add }}"
+              class="order-btn w-100">
+        Order Now
+      </button>
+
+      <input type="hidden" name="product_id" value="{{ product_id }}">
+      <input type="hidden" name="quantity" value="{{ minimum }}">
     </form>
+
   </div>
+
+
+  <style>
+  .product-thumb {
+  background: #ffffff;
+  border-radius: 50px; 
+  border: 1.5px solid rgba(178,178,178,0.5); 
+  display: flex;
+  flex-direction: column;
+  height:100%;
+  transition: all 0.3s ease;
+  overflow: hidden;
+ 
+}
+
+.product-thumb:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Image Section */
+.product-thumb .image {
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.product-thumb .image img {
+  max-height: 70%;
+  object-fit: contain;
+  width: 80%;
+  transition: transform 0.3s ease;
+}
+
+.product-thumb:hover .image img {
+  transform: scale(1.05);
+}
+
+/* Text section */
+.product-thumb .content {
+  background: #F9F9F9; 
+  border-radius: 15px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+   padding: 16px 17px
+}
+
+/* Title */
+.product-title a {
+  font-size: 18px;
+  color: #121212;
+  text-decoration: none;
+}
+
+.product-title a:hover {
+  color: #E31E24;
+}
+
+/* Description */
+.product-desc {
+  font-size: 16px;
+  color: #121212B2;
+  margin-bottom: 10px;
+}
+.product-thumb .description{
+  margin-bottom: 0px; 
+}
+
+/* Price */
+.price-new {
+  font-size: 18px;
+  font-weight: 600;
+  color: #121212;
+}
+
+/* Order button */
+.order-btn {
+  background: #fff;
+  border: 1px solid #E31E24;
+  color: #E31E24;
+  padding: 10px 30px; 
+  border-radius: 20px;
+  transition: 0.3s;
+  font-size: 16px;
+  font-weight: 600;
+  boxShadow: '0px 4px 4px 0px #B2B2B280';
+  width: 70%!important
+
+}
+
+  
+ 
+</style>
 </div>

@@ -1,0 +1,446 @@
+ {{ header }}
+
+<div id="common-home" style="
+background: linear-gradient(167.02deg, #E31E24 12.38%, #B0171C 18%, #7D1114 100%)
+">
+
+  <!-- HERO SECTION -->
+<!-- HERO SECTION -->
+<section class="about-hero">
+  <div class="hero-container">
+
+    <!-- TEXT CONTENT -->
+    <div class="hero-text">
+      <h1>
+        <span class="hero-bold">Freshly Prepared Today.</span>
+        <span class="hero-light"> At Your Door in Minutes.</span>
+      </h1>
+
+      <p class="hero-desc">
+        We don’t believe in "sitting on a shelf." Our kitchen fires up every
+        morning to prep fresh ingredients from scratch, ensuring every meal
+        is handled with care and delivered at peak flavor.
+      </p>
+
+   <!---   <a href="index.php?route=product/category&language=en-gb&path=66_59" 
+       style="display: inline-block; margin-top: 1rem; background-color: transparent; color: white; font-weight: bold; text-decoration: none; border-radius: 20px;  border: 2px solid #fff;"
+      >
+        Order Now
+      </a> -->
+    </div>
+
+    <!-- IMAGE CONTENT -->
+    <div class="hero-image">
+      <img 
+        src="{{ base }}image/catalog/aboutImg.png"
+        alt="Food Image"
+        width="386"
+        height="399"
+      >
+    </div>
+
+  </div>
+</section>
+
+
+
+  <!-- MAIN CONTENT -->
+  <div class="container">
+    <div class="row">
+      {{ column_left }}
+
+      <div id="content" class="col">
+        {{ content_top }}
+
+        <!-- WRAPPER SECTION -->
+       <section class="about-wrapper">
+       <div class="wrapper-grid">
+
+    <div class="wrapper-item">
+      <div class="wrapper-icon-box">
+        <img src="{{ base }}image/catalog/kitchen-icon.svg" alt="Kitchen Icon" class="wrapper-svg">
+      </div>
+      <p>Everything you eat was prepared in our kitchen this morning</p>
+    </div>
+
+    <div class="wrapper-item">
+      <div class="wrapper-icon-box">
+        <img src="{{ base }}image/catalog/order-icon.svg" alt="Order Icon" class="wrapper-svg">
+      </div>
+      <p>Every Order is checked and sealed for quality.</p>
+    </div>
+
+    <div class="wrapper-item">
+      <div class="wrapper-icon-box">
+        <img src="{{ base }}image/catalog/driver-icon.svg" alt="Driver Icon" class="wrapper-svg">
+      </div>
+      <p>Our drivers are on the move the moment your meal is ready</p>
+    </div>
+
+    <div class="wrapper-item">
+      <div class="wrapper-icon-box">
+        <img src="{{ base }}image/catalog/driver-icon.svg" alt="Driver Icon" class="wrapper-svg">
+      </div>
+      <p>Our drivers are on the move the moment your meal is ready</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- OUR VALUES SECTION -->
+<section class="about-values">
+
+  <!-- Section Heading -->
+  <div class="values-heading">
+    <h2>Our Values</h2>
+    <p>We don’t just follow recipes; we follow a set of principles that ensure every meal is worthy of your table.</p>
+  </div>
+
+  <!-- Values Items -->
+  <div class="values-grid">
+
+    <!-- ITEM 1 -->
+    <div class="value-item">
+      <div class="value-img">
+        <img src="{{ base }}image/catalog/quality.png" alt="Quality Without Shortcuts">
+      </div>
+      <div class="value-text">
+        <h3>Quality Without Shortcuts</h3>
+        <p>We believe "fast" should not mean cheap. While others look for ways to cut costs, we look for ways to elevate the experience. From premium oils to hand-picked produce, we choose the best path, not the easiest one.</p>
+      </div>
+    </div>
+
+    <!-- ITEM 2 (REVERSED) -->
+    <div class="value-item value-item-reverse">
+      <div class="value-img">
+        <img src="{{ base }}image/catalog/radial-freshness.png" alt="Radical Freshness">
+      </div>
+      <div class="value-text">
+        <h3>Radical Freshness</h3>
+        <p>Freshness isn’t a marketing buzzword; it’s our daily ritual. We don’t own a long-term freezer. Our kitchen operates on a 24-hour cycle—prepped today, served today, enjoyed today.</p>
+      </div>
+    </div>
+
+    <!-- ITEM 3 -->
+    <div class="value-item">
+      <div class="value-img">
+        <img src="{{ base }}image/catalog/people-frist-service.png" alt="People-First Service">
+      </div>
+      <div class="value-text">
+        <h3>People-First Service</h3>
+        <p>Behind every order is a team of real people. We take care of our kitchen staff and our drivers, because we know that happy hands make better food. When you support us, you’re supporting a community that cares.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM CTA SECTION -->
+  <div class="values-cta">
+    <h3>We value your time as much as your tastebuds. if it’s not fresh enough, fast enough, or good enough, it’s not Lescy Romeo</h3>
+    <a href="index.php?route=product/category&language=en-gb&path=66_59">Order Now</a>
+  </div>
+
+</section>
+
+
+        {{ content_bottom }}
+      </div>
+
+      {{ column_right }}
+    </div>
+  </div>
+
+
+<style> 
+/* HERO SECTION */
+.about-hero {
+  background: linear-gradient(93.23deg, #E31E24 0.65%, #7D1114 67.91%);
+  padding: 4rem 2rem;
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+
+.hero-text {
+  width: 60%;
+}
+
+.hero-text h1 {
+  color: white;
+  font-size: 48px;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+.hero-text a {
+  font-size: 1rem;
+ padding: 0.45rem 1.2rem;
+}
+
+.hero-bold {
+  font-weight: 700;
+}
+
+.hero-light {
+  font-weight: 400;
+}
+
+.hero-desc {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 2rem;
+}
+
+.hero-btn {
+  display: inline-block;
+  background: white;
+  color: #E31E24;
+  padding: 0.9rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.hero-image {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.about-wrapper {
+  padding: 4rem 2rem;
+}
+
+.wrapper-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.wrapper-item {
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.wrapper-item:hover {
+  transform: scale(1.1);
+}
+
+.wrapper-icon-box {
+  width: 136px;
+  height: 139px;
+  background: white;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  color: #E31E24; /* SVG uses currentColor */
+  transition: color 0.3s ease;
+}
+
+.wrapper-item:hover .wrapper-icon-box {
+  color: #7D1114; /* Change SVG color on hover */
+}
+
+.wrapper-svg {
+  width: 60px;
+  height: 60px;
+}
+
+.wrapper-item p {
+  color: white;
+  font-size: 18px;
+  padding-top: 1rem;
+  max-width: 220px;
+  margin: 0 auto;
+}
+
+.about-values {
+  padding: 4rem 2rem;
+}
+
+.values-heading {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+.values-heading h2 {
+  font-size: 36px;
+  font-weight: 600;
+  color: #F9F9F9;
+  margin-bottom: 0.5rem;
+}
+
+.values-heading p {
+  font-size: 18px;
+  color: #F9F9F9;
+}
+
+.values-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.value-item {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.value-item-reverse {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.value-img img {
+  max-width: 367px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.value-text h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #F9F9F9;
+  margin-bottom: 0.5rem;
+}
+
+.value-text p {
+  font-size: 16px;
+  color: #F9F9F9;
+  line-height: 1.6;
+}
+
+/* CTA SECTION */
+.values-cta {
+  margin-top: 4rem;
+  background-image: url('{{ base }}image/catalog/white-bg.png');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 6rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.values-cta h3 {
+  font-size: 20px;
+  color: #121212;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.values-cta a {
+  display: inline-block;
+  background: #F9F9F9;
+  color: #E31E24;
+  border: 2px solid #E31E24;
+  border-radius: 15px;
+  padding: 1rem 3rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.values-cta a:hover {
+  transform: scale(1.1);
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 576px) {
+  .wrapper-grid {
+    grid-template-columns: 1fr;
+  }
+  .values-cta {
+    margin-bottom: 8em;
+  }
+}
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    width: 100%;
+  }
+
+  .hero-text h1 {
+    font-size: 28px;
+  }
+
+  .hero-image {
+    width: 100%;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  .value-item,
+  .value-item-reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media(min-width: 992px) {
+    .hero-text a {
+  font-size: 20px;
+   padding: 0.75rem 3.5rem;
+}
+.values-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* SIDE-BY-SIDE LAYOUT ON DESKTOP */
+.value-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+/* ALTERNATE SECOND ITEM */
+.value-item-reverse {
+  flex-direction: row-reverse;
+}
+
+/* CONTROL WIDTHS */
+.value-text {
+  flex: 1;
+}
+
+.value-img {
+  flex: 1;
+}
+
+.value-img img {
+  width: 100%;
+  max-width: 420px;
+}
+
+ 
+}
+
+</style>
+</div>
+
+{{ footer }}

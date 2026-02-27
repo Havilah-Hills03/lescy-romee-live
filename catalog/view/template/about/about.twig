@@ -1,0 +1,116 @@
+ {{ header }}
+
+<div id="common-home">
+
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+  <div class="container h-100 d-flex align-items-center justify-content-between">
+
+    <div class="hero-text">
+      <h1>
+        Hot, Fresh meals <br>
+        <span>Delivered in 20 minutes</span>
+      </h1>
+      <a href="#" class="btn btn-light hero-btn">Order Now</a>
+    </div>
+
+    <div class="hero-image">
+      <img src="image/catalog/home-hero-banner.png" alt="Delicious meals" class="img-fluid">
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- MAIN CONTENT -->
+  <div class="container">
+    <div class="row">
+      {{ column_left }}
+
+      <div id="content" class="col">
+        {{ content_top }}
+
+        <!-- WRAPPER SECTION -->
+        <section class="wrapper-section">
+          <div class="row text-center">
+
+            {% set wrapperData = [
+              {
+                'icon': 'image/kitchen-icon.svg',
+                'text': 'Everything you eat was prepared in our kitchen this morning'
+              },
+              {
+                'icon': 'image/order-icon.svg',
+                'text': 'Every Order is checked and sealed for quality.'
+              },
+              {
+                'icon': 'image/driver-icon.svg',
+                'text': 'Our drivers are on the move the moment your meal is ready'
+              },
+              {
+                'icon': 'image/driver-icon.svg',
+                'text': 'Our drivers are on the move the moment your meal is ready'
+              }
+            ] %}
+
+            {% for item in wrapperData %}
+              <div class="col-lg-3 col-md-6 mb-4 wrapper-item">
+                <div class="icon-box">
+                  <img src="{{ item.icon }}" class="img-fluid">
+                </div>
+                <p class="wrapper-text">{{ item.text }}</p>
+              </div>
+            {% endfor %}
+
+          </div>
+        </section>
+
+        {{ content_bottom }}
+      </div>
+
+      {{ column_right }}
+    </div>
+  </div>
+
+
+<style>
+/* HERO */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(93.23deg, #E31E24 0.65%, #7D1114 67.91%);
+  color: #fff;
+}
+
+ .hero-section a {
+  font-size: 1rem;
+   padding: 0.75rem 3.5rem;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.hero-text span {
+  font-weight: 400;
+}
+
+.hero-btn {
+  margin-top: 20px;
+  color: #E31E24;
+  font-weight: bold;
+  padding: 12px 28px;
+}
+
+.hero-image {
+  width: 40%;
+  text-align: right;
+}
+
+</style>
+</div>
+
+{{ footer }}
