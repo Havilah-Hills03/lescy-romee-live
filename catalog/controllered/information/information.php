@@ -54,12 +54,7 @@ class Information extends \Opencart\System\Engine\Controller {
 			$data['footer'] = $this->load->controller('common/footer');
 			$data['header'] = $this->load->controller('common/header');
 
-			// $this->response->setOutput($this->load->view('information/information', $data));
-			if (isset($this->request->get['information_id']) && $this->request->get['information_id'] == 1) {
-    $this->response->setOutput($this->load->view('information/about', $data));
-} else {
-    $this->response->setOutput($this->load->view('information/information', $data));
-}
+			$this->response->setOutput($this->load->view('information/information', $data));
 		} else {
 			return new \Opencart\System\Engine\Action('error/not_found');
 		}

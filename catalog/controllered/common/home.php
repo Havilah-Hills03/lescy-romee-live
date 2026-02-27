@@ -32,6 +32,4 @@ class Home extends \Opencart\System\Engine\Controller {
 
 		$this->response->setOutput($this->load->view('common/home', $data));
 	}
-
 }
-
